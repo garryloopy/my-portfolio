@@ -53,6 +53,31 @@ export default function ShowcaseContainer({ children }) {
     return () => clearInterval(intervalId);
   }, [currentSlide, animate, scope, slideShowTypes.left, slideShowTypes.start]);
 
+  const handleOnDirectionClick = (direction) => {
+    let newSlide;
+
+    if (direction === "RIGHT") {
+      newSlide = currentSlide < slideLength ? currentSlide + 1 : 1;
+    } else {
+      newSlide = currentSlide > 1 ? currentSlide - 1 : slideLength;
+    }
+
+    setCurrentSlide(newSlide);
+
+    const newX =
+      newSlide < slideLength
+        ? slideShowTypes.left * newSlide
+        : slideShowTypes.start;
+
+    animate(
+      scope.current,
+      {
+        x: newX,
+      },
+      { duration: 1, ease: "easeInOut" }
+    );
+  };
+
   return (
     <div className="relative rounded-xl w-[full] h-[32rem] overflow-hidden">
       <div ref={scope} className="flex flex-row h-full">
