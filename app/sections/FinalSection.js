@@ -39,29 +39,10 @@ export default function FinalSection() {
       <SectionHeader>Stack</SectionHeader>
       <div className="flex flex-col gap-8">
         <p className="text-gray-50 font-normal text-lg">
-          Im a current student at{" "}
-          <span className="text-red-700 font-bold text-xl">
-            Southern Alberta Institute of Technology
-          </span>
-          , Software Development diploma. Proficient in C#, Java, Python, and
-          more. I specialize in React, React Native, Typescript, Javascript,
-          Firebase, and game development using Unity.
-        </p>
-
-        <div className="flex flex-col gap-1 w-fit">
-          <p className="text-gray-50 font-normal text-lg">
-            A sum of the technologies that Ive been working with:
-          </p>
-          <div className="grid grid-cols-3 w-full gap-1">
-            {TECHNOLOGIES.map((technology) => (
-              <Item key={technology}>{technology}</Item>
-            ))}
-          </div>
-        </div>
-
-        <p className="text-gray-50 font-normal text-lg">
-          In addition to coding, I also do game development with C# with Unity
-          on my spare time expanding my interest into C++ with Unreal Engine.
+          Nulla commodo nostrud culpa aute non enim sunt officia quis sunt id.
+          Anim adipisicing voluptate nulla nostrud officia incididunt sit fugiat
+          dolore amet. Non cillum sint ad duis veniam pariatur adipisicing.
+          Pariatur elit ex veniam ex veniam nostrud.
         </p>
       </div>
     </SectionLayout>

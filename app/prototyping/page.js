@@ -33,7 +33,10 @@ import PageLayout from "../layouts/PageLayout";
 
 export default function PrototypingPage() {
   return (
-    <PageLayout>
+    <PageLayout className="justify-center items-center">
+      <p className="text-xl font-semibold text-gray-50">
+        Page specifically for prototyping...
+      </p>
       {/* <div className="h-[32rem] w-full bg-neutral-950 mt-12">
         <div className="absolute -z-10 w-full h-full backdrop-blur-lg" />
         <p className="text-white">Test</p>

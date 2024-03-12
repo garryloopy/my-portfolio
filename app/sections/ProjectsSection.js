@@ -2,10 +2,13 @@
 
 import SectionHeader from "./SectionHeader";
 import SectionLayout from "./SectionLayout";
-import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
-import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
 import ShowCase from "./Showcase";
 import ShowcaseContainer from "./ShowcaseContainer";
+
+import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
+import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
+import RicardoPlaceholder from "@/public/images/ricardo.jpg";
+import LordFarquaadPlaceholder from "@/public/images/lord_farquaad.jpg";
 
 /**
  * Represents the projects section
@@ -35,22 +38,22 @@ export default function ProjectsSection() {
           showcaseTitle="Virtual Pets"
         />
         <ShowCase
-          imageAlt="Miggy's Munchies image"
-          imageSource={MiggysMunchiesPlaceholder}
-          githubURL="https://github.com/garryloopy/capstone-project-winter-2024"
+          imageAlt="The one and only ricardo"
+          imageSource={RicardoPlaceholder}
+          githubURL=""
           linkURL=""
-          showcaseDescription="An e-commerce web app that allows customers to order food items such as Sushi Bake, Spam Musubi, Mango Graham, and Baked Macaroni."
-          showcaseTechnologies="Next.js, Vercel, React JS, MongoDB, Next AUTH, Cloudinary"
-          showcaseTitle="Miggy's Munchies"
+          showcaseDescription="The one and only ricardo milos"
+          showcaseTechnologies="You got that"
+          showcaseTitle="Ricardo milos"
         />
         <ShowCase
-          imageAlt="Virtual Pets"
-          imageSource={ECommerceStorePlaceholder}
-          githubURL="https://github.com/garryloopy/e-commerce-store"
+          imageAlt="Lord Farquaad image"
+          imageSource={LordFarquaadPlaceholder}
+          githubURL=""
           linkURL=""
-          showcaseDescription="An e-commerce web app that allows customers to buy virtual pats to virtual pets. "
-          showcaseTechnologies="Next.js, Vercel, React JS, Firebase"
-          showcaseTitle="Virtual Pets"
+          showcaseDescription="Still in development"
+          showcaseTechnologies="Get off me swamp"
+          showcaseTitle="Lord Farquaad"
         />
       </ShowcaseContainer>
     </SectionLayout>
