@@ -12,7 +12,6 @@ import FinalSection from "./sections/FinalSection";
 export default function HomePage() {
   return (
     <PageLayout>
-      <ColorPalette />
       <LandingSection />
       <section className="flex flex-col gap-32 items-center">
         <AboutMeSection />
