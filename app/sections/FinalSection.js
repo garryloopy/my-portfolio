@@ -7,7 +7,7 @@ import { IoCaretForwardSharp } from "react-icons/io5";
  * Represents the about me section
  * @returns About me section
  */
-export default function AboutMeSection() {
+export default function FinalSection() {
   // The technologies
   const TECHNOLOGIES = [
     "Javascript ES6+",
@@ -36,7 +36,7 @@ export default function AboutMeSection() {
 
   return (
     <SectionLayout>
-      <SectionHeader>About Me</SectionHeader>
+      <SectionHeader>Stack</SectionHeader>
       <div className="flex flex-col gap-8">
         <p className="text-gray-50 font-normal text-lg">
           Im a current student at{" "}

@@ -49,7 +49,7 @@ export default function ShowcaseContainer({ children }) {
       {
         x: newX,
       },
-      { duration: 0.75, ease: "easeInOut" }
+      { duration: 1, ease: "easeInOut" }
     );
   };
   return (
@@ -58,17 +58,17 @@ export default function ShowcaseContainer({ children }) {
         {children}
       </div>
 
-      <div className="absolute flex items-center justify-center top-0 left-0 w-[8rem] h-full">
+      <div className="absolute flex items-center justify-center top-0 left-0 w-[8rem] h-full group">
         <FaAngleLeft
           size={40}
-          className="text-white hover:cursor-pointer"
+          className="text-gray-50 hover:cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
           onClick={() => handleOnDirectionClick("LEFT")}
         />
       </div>
-      <div className="absolute flex items-center justify-center top-0 right-0 w-[8rem] h-full">
+      <div className="absolute flex items-center justify-center top-0 right-0 w-[8rem] h-full group">
         <FaAngleRight
           size={40}
-          className="text-white hover:cursor-pointer"
+          className="text-gray-50 hover:cursor-pointer opacity-50 group-hover:opacity-100 transition-opacity"
           onClick={() => handleOnDirectionClick("RIGHT")}
         />
       </div>
