@@ -21,37 +21,38 @@ export default function ShowcaseContainer({ children }) {
 
   // Auto-advance the slideshow every 5 seconds
   useEffect(() => {
+    const handleOnDirectionClick = (direction) => {
+      let newSlide;
+
+      if (direction === "RIGHT") {
+        newSlide = currentSlide < slideLength ? currentSlide + 1 : 1;
+      } else {
+        newSlide = currentSlide > 1 ? currentSlide - 1 : slideLength;
+      }
+
+      setCurrentSlide(newSlide);
+
+      const newX =
+        newSlide < slideLength
+          ? slideShowTypes.left * newSlide
+          : slideShowTypes.start;
+
+      animate(
+        scope.current,
+        {
+          x: newX,
+        },
+        { duration: 1, ease: "easeInOut" }
+      );
+    };
+
     const intervalId = setInterval(() => {
       handleOnDirectionClick("RIGHT");
     }, 10000);
 
     return () => clearInterval(intervalId);
-  }, [currentSlide]);
+  }, [currentSlide, animate, scope, slideShowTypes.left, slideShowTypes.start]);
 
-  const handleOnDirectionClick = (direction) => {
-    let newSlide;
-
-    if (direction === "RIGHT") {
-      newSlide = currentSlide < slideLength ? currentSlide + 1 : 1;
-    } else {
-      newSlide = currentSlide > 1 ? currentSlide - 1 : slideLength;
-    }
-
-    setCurrentSlide(newSlide);
-
-    const newX =
-      newSlide < slideLength
-        ? slideShowTypes.left * newSlide
-        : slideShowTypes.start;
-
-    animate(
-      scope.current,
-      {
-        x: newX,
-      },
-      { duration: 1, ease: "easeInOut" }
-    );
-  };
   return (
     <div className="relative rounded-xl w-[full] h-[32rem] overflow-hidden">
       <div ref={scope} className="flex flex-row h-full">
