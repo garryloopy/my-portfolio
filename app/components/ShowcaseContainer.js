@@ -79,7 +79,7 @@ export default function ShowcaseContainer({ children }) {
   };
 
   return (
-    <div className="relative rounded-xl w-[full] h-[32rem] overflow-auto hidden lg:block ">
+    <div className="relative rounded-xl w-[full] h-[32rem] overflow-hidden hidden lg:block ">
       <div ref={scope} className="flex flex-row h-full">
         {children}
       </div>
