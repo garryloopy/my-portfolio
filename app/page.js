@@ -15,21 +15,15 @@ export default function HomePage() {
   return (
     <PageLayout>
       <LandingSection />
-      <section className="flex flex-col gap-32 items-center">
-        <Element name="aboutMeElement">
-          <AboutMeSection />
-        </Element>
-        <Element name="educationElement">
-          <EducationSection />
-        </Element>
-
-        <Element name="experienceElement">
-          <ExperienceSection />
-        </Element>
-
-        <Element name="projectsElement">
-          <ProjectsSection />
-        </Element>
+      <section className="flex flex-col gap-12 items-center">
+        <Element name="aboutMeElement" />
+        <AboutMeSection />
+        <Element name="educationElement" />
+        <EducationSection />
+        <Element name="experienceElement" />
+        <ExperienceSection />
+        <Element name="projectsElement" />
+        <ProjectsSection />
       </section>
     </PageLayout>
   );

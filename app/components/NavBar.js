@@ -56,7 +56,7 @@ export default function NavBar() {
       className="bg-zinc-950
       h-16 flex-row fixed top-0 w-full z-10"
     >
-      <div className="flex justify-center items-center w-full h-full bg-zinc-900/45">
+      <div className="flex justify-center items-center w-full h-full bg-zinc-900/45 sm:px-4">
         <div className="flex flex-row justify-center sm:justify-between items-center w-full sm:w-[64rem] h-full">
           <button
             className="font-bold text-xl text-gray-50 hidden  sm:block"

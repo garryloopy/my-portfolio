@@ -16,11 +16,11 @@ export default function ShowCase({
     <div className="relative w-full h-full flex flex-col justify-end flex-none">
       <div className="absolute w-full h-full brightness-75 -z-10">
         <Image
-          className="object-cover"
+          className="object-cover lg"
           src={imageSource}
           fill={true}
           alt={imageAlt}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 1200px"
+          sizes="(max-width: 1024px) 50vw, (max-width: 768px) 80vw, 1200px"
         />
       </div>
 
