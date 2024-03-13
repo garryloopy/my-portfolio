@@ -1,22 +1,48 @@
 import SectionLayout from "./SectionLayout";
 import SectionHeader from "./SectionHeader";
 
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 /**
  * Represents the education section
  * @returns Education Section
  */
 export default function EducationSection() {
+  const refOptions = {
+    once: true,
+  };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, refOptions);
+
+  const variant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5,
+        duration: 1,
+      },
+    },
+    hidden: { opacity: 0, y: 100 },
+  };
   return (
     <SectionLayout>
       <SectionHeader>Education</SectionHeader>
-      <div>
-        <p className="text-xl font-semibold text-gray-50/90">
+      <motion.div
+        ref={ref}
+        variants={variant}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
+        <p className="text-xl font-semibold text-gray-50">
           Southern Alberta Institute of Technology - Software Development
         </p>
-        <p className="text-base font-semibold text-gray-200/90">
+        <p className="text-base font-medium text-gray-100">
           Calgary, Alberta. 2022 - 2024
         </p>
-      </div>
+      </motion.div>
     </SectionLayout>
   );
 }
