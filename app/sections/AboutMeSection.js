@@ -124,6 +124,7 @@ export default function AboutMeSection() {
         </div>
 
         <motion.div
+          className="hidden lg:block"
           variants={image}
           initial="hidden"
           animate={imageIsInView ? "visible" : "hidden"}

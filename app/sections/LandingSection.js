@@ -19,9 +19,11 @@ export default function LandingSection() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 1 }}
       >
-        <h1 className="font-bold text-6xl text-gray-50">Garry Jr Dayag</h1>
+        <h1 className="font-bold text-6xl text-gray-50 text-center">
+          Garry Jr Dayag
+        </h1>
         <div className="flex flex-col justify-center items-center gap-1">
-          <h1 className="font-bold text-3xl text-gray-50">
+          <h1 className="font-bold text-3xl text-gray-50 text-center">
             Welcome to my digital space!
           </h1>
           <p className="font-medium text-xl text-gray-300">
