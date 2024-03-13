@@ -10,7 +10,7 @@ export default function ShowcaseContainer({ children }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slideLength = 4;
-  const slideAmount = 1024;
+  const slideAmount = 992;
 
   const slideShowTypes = {
     left: -slideAmount,
@@ -79,7 +79,7 @@ export default function ShowcaseContainer({ children }) {
   };
 
   return (
-    <div className="relative rounded-xl w-[full] h-[32rem] overflow-hidden hidden lg:block">
+    <div className="relative rounded-xl w-[full] h-[32rem] overflow-auto hidden lg:block ">
       <div ref={scope} className="flex flex-row h-full">
         {children}
       </div>

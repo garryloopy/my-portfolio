@@ -1,9 +1,9 @@
 "use client";
 
-import SectionHeader from "./SectionHeader";
-import SectionLayout from "./SectionLayout";
-import ShowCase from "./Showcase";
-import ShowcaseContainer from "./ShowcaseContainer";
+import SectionHeader from "../components/SectionHeader";
+import SectionLayout from "../layouts/SectionLayout";
+import ShowCase from "../components/Showcase";
+import ShowcaseContainer from "../components/ShowcaseContainer";
 
 import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
 import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";

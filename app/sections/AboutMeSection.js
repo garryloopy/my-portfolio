@@ -1,5 +1,5 @@
-import SectionHeader from "./SectionHeader";
-import SectionLayout from "./SectionLayout";
+import SectionHeader from "../components/SectionHeader";
+import SectionLayout from "../layouts/SectionLayout";
 
 import { IoCaretForwardSharp } from "react-icons/io5";
 

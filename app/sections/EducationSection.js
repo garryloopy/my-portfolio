@@ -1,5 +1,5 @@
-import SectionLayout from "./SectionLayout";
-import SectionHeader from "./SectionHeader";
+import SectionLayout from "../layouts/SectionLayout";
+import SectionHeader from "../components/SectionHeader";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
