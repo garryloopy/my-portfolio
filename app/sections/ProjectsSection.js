@@ -10,11 +10,33 @@ import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
 import RicardoPlaceholder from "@/public/images/ricardo.jpg";
 import LordFarquaadPlaceholder from "@/public/images/lord_farquaad.jpg";
 
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 /**
  * Represents the projects section
  * @returns Projects Section
  */
 export default function ProjectsSection() {
+  const refOptions = {
+    once: true,
+  };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, refOptions);
+
+  const variant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.5,
+        duration: 1,
+      },
+    },
+    hidden: { opacity: 0, y: 100 },
+  };
+
   return (
     <SectionLayout>
       <SectionHeader>Projects</SectionHeader>
@@ -56,6 +78,21 @@ export default function ProjectsSection() {
           showcaseTitle="Lord Farquaad"
         />
       </ShowcaseContainer>
+
+      <div className="flex flex-col gap-8">
+        <motion.p
+          className="text-gray-400 font-normal text-lg"
+          ref={ref}
+          variants={variant}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          Nulla commodo nostrud culpa aute non enim sunt officia quis sunt id.
+          Anim adipisicing voluptate nulla nostrud officia incididunt sit fugiat
+          dolore amet. Non cillum sint ad duis veniam pariatur adipisicing.
+          Pariatur elit ex veniam ex veniam nostrud.
+        </motion.p>
+      </div>
     </SectionLayout>
   );
 }
