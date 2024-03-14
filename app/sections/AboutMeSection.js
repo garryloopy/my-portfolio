@@ -49,8 +49,8 @@ export default function AboutMeSection() {
         variants={variants}
         custom={custom}
       >
-        <IoCaretForwardSharp className="text-gray-50" />
-        <p className="text-gray-50 font-normal text-lg">{children}</p>
+        <IoCaretForwardSharp className="text-gray-400" />
+        <p className="text-gray-400 font-normal text-lg">{children}</p>
       </motion.div>
     );
   };
@@ -88,7 +88,7 @@ export default function AboutMeSection() {
       <SectionHeader>About Me</SectionHeader>
       <div className="flex flex-row items-center gap-12">
         <div className="flex flex-col gap-8">
-          <p className="text-gray-50 font-normal text-lg">
+          <p className="text-gray-400 font-normal text-lg">
             Im a current student at{" "}
             <span className="text-red-700 font-bold text-xl">
               Southern Alberta Institute of Technology
@@ -99,7 +99,7 @@ export default function AboutMeSection() {
           </p>
 
           <div className="flex flex-col gap-1 w-fit">
-            <p className="text-gray-50 font-normal text-lg">
+            <p className="text-gray-400 font-normal text-lg">
               A sum of the technologies that Ive been working with:
             </p>
             <motion.div
@@ -117,7 +117,7 @@ export default function AboutMeSection() {
             </motion.div>
           </div>
 
-          <p className="text-gray-50 font-normal text-lg">
+          <p className="text-gray-400 font-normal text-lg">
             In addition to coding, I also do game development with C# with Unity
             on my spare time expanding my interest into C++ with Unreal Engine.
           </p>

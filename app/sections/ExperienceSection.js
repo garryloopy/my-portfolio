@@ -34,7 +34,7 @@ export default function ExperienceSection() {
       <SectionHeader>Experience</SectionHeader>
       <div className="flex flex-col gap-8">
         <motion.p
-          className="text-gray-50 font-normal text-lg"
+          className="text-gray-400 font-normal text-lg"
           ref={ref}
           variants={variant}
           initial="hidden"

@@ -36,10 +36,10 @@ export default function EducationSection() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <p className="text-xl font-semibold text-gray-50">
+        <p className="text-xl font-semibold text-gray-400">
           Southern Alberta Institute of Technology - Software Development
         </p>
-        <p className="text-base font-medium text-gray-100">
+        <p className="text-base font-medium text-gray-400">
           Calgary, Alberta. 2022 - 2024
         </p>
       </motion.div>
