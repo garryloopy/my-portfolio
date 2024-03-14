@@ -11,6 +11,8 @@ import { useState } from "react";
 export default function NavBar() {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
+  const listItems = ["Home", "About me", "Education", "Experience", "Projects"];
+
   const scrollOptions = {
     duration: 800,
     delay: 100,
@@ -19,6 +21,8 @@ export default function NavBar() {
 
   const handleScrollToTop = () => {
     animateScroll.scrollToTop(scrollOptions);
+
+    setIsHamburgerOpen(false);
   };
 
   const handleScrollToAboutMe = () => {
@@ -28,6 +32,8 @@ export default function NavBar() {
     };
 
     scroller.scrollTo("aboutMeElement", newScrollOptions);
+
+    setIsHamburgerOpen(false);
   };
 
   const handleScrollToEducation = () => {
@@ -37,6 +43,8 @@ export default function NavBar() {
     };
 
     scroller.scrollTo("educationElement", newScrollOptions);
+
+    setIsHamburgerOpen(false);
   };
 
   const handleScrollToProjects = () => {
@@ -46,6 +54,8 @@ export default function NavBar() {
     };
 
     scroller.scrollTo("projectsElement", newScrollOptions);
+
+    setIsHamburgerOpen(false);
   };
 
   const handleScrollToExperience = () => {
@@ -55,6 +65,8 @@ export default function NavBar() {
     };
 
     scroller.scrollTo("experienceElement", newScrollOptions);
+
+    setIsHamburgerOpen(false);
   };
 
   const handleOnHamburgerClick = () => {
@@ -108,8 +120,8 @@ export default function NavBar() {
           </div>
         </div>
 
-        <div className="sm:hidden flex justify-center bg-zinc-900/45 w-full h-full">
-          <div className="absolute top-2 right-2">
+        <div className="sm:hidden flex justify-center w-full h-full">
+          <div className="fixed top-4 right-4">
             {isHamburgerOpen ? (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -118,7 +130,7 @@ export default function NavBar() {
               >
                 <IoClose
                   className=" text-gray-50 hover:cursor-pointer"
-                  size={45}
+                  size={40}
                   onClick={handleOnHamburgerClick}
                 />
               </motion.div>
@@ -130,7 +142,7 @@ export default function NavBar() {
               >
                 <IoMenu
                   className=" text-gray-50 hover:cursor-pointer"
-                  size={45}
+                  size={40}
                   onClick={handleOnHamburgerClick}
                 />
               </motion.div>
@@ -139,36 +151,51 @@ export default function NavBar() {
           {isHamburgerOpen && (
             <div className=" relative inset-y-16 w-full h-fit bg-zinc-950">
               <div className=" flex flex-col items-center justify-center bg-zinc-900/45 divide-y shadow-md divide-zinc-700 border-y border-zinc-700 h-fit w-full">
-                <button
+                <motion.button
+                  initial={{ opacity: 0, x: -128 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
                   className="font-medium text-lg text-gray-50 w-full h-full py-3"
                   onClick={handleScrollToTop}
                 >
                   Home
-                </button>
-                <button
+                </motion.button>
+                <motion.button
+                  initial={{ opacity: 0, x: -128 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut", delay: 0.05 }}
                   className="font-medium text-lg text-gray-50 w-full h-full py-3"
                   onClick={handleScrollToAboutMe}
                 >
                   About me
-                </button>
-                <button
+                </motion.button>
+                <motion.button
+                  initial={{ opacity: 0, x: -128 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut", delay: 0.1 }}
                   className="font-medium text-lg text-gray-50 w-full h-full py-3"
                   onClick={handleScrollToEducation}
                 >
                   Education
-                </button>
-                <button
+                </motion.button>
+                <motion.button
+                  initial={{ opacity: 0, x: -128 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut", delay: 0.15 }}
                   className="font-medium text-lg text-gray-50 w-full h-full py-3"
                   onClick={handleScrollToExperience}
                 >
                   Experience
-                </button>
-                <button
+                </motion.button>
+                <motion.button
+                  initial={{ opacity: 0, x: -128 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut", delay: 0.2 }}
                   className="font-medium text-lg text-gray-50 w-full h-full py-3"
                   onClick={handleScrollToProjects}
                 >
                   Projects
-                </button>
+                </motion.button>
               </div>
             </div>
           )}
