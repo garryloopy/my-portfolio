@@ -26,7 +26,7 @@ export default function LandingSection() {
           <h1 className="font-bold text-3xl text-gray-50 text-center">
             Welcome to my digital space!
           </h1>
-          <p className="font-medium text-xl text-gray-400">
+          <p className="font-medium text-xl text-gray-400 text-center">
             Software & Web Developer, student at SAIT
           </p>
         </div>
