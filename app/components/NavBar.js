@@ -138,7 +138,7 @@ export default function NavBar() {
           </div>
           {isHamburgerOpen && (
             <div className=" relative inset-y-16 w-full h-fit bg-zinc-950">
-              <div className=" flex flex-col items-center justify-center bg-zinc-800/45 divide-y shadow-md divide-zinc-700 border-y border-zinc-700 h-fit w-full">
+              <div className=" flex flex-col items-center justify-center bg-zinc-900/45 divide-y shadow-md divide-zinc-700 border-y border-zinc-700 h-fit w-full">
                 <button
                   className="font-medium text-lg text-gray-50 w-full h-full py-3"
                   onClick={handleScrollToTop}

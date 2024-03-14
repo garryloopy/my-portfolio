@@ -9,6 +9,7 @@ import LandingSection from "./sections/LandingSection";
 import ExperienceSection from "./sections/ExperienceSection";
 
 import { Element } from "react-scroll";
+
 // Test
 
 export default function HomePage() {
