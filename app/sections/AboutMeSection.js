@@ -119,7 +119,8 @@ export default function AboutMeSection() {
 
           <p className="text-gray-400 font-normal text-lg">
             In addition to coding, I also do game development with C# with Unity
-            on my spare time expanding my interest into C++ with Unreal Engine.
+            on my spare time while expanding my interest into C++ with Unreal
+            Engine.
           </p>
         </div>
 
