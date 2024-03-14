@@ -51,8 +51,16 @@ export default function LandingSection() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 1.5 }}
       >
-        <div className="absolute -inset-0.5 w-full h-full bg-[#C6AB84] blur-md" />
-        <button className="border flex flex-row items-center justify-center gap-2 relative px-8 py-3 bg-[#00111C] rounded-sm text-[#C6AB84]">
+        <motion.div
+          className="absolute -inset-0.5 w-full h-full bg-[#C6AB84] blur-md"
+          animate={{
+            rotate: [-2, 0, 2],
+            scale: [1, 1.05, 1],
+            opacity: [0.9, 1, 0.9],
+          }}
+          transition={{ repeat: Infinity, duration: 8, repeatType: "reverse" }}
+        />
+        <button className="border flex flex-row items-center justify-center gap-2 relative px-8 py-3 bg-[#00111C] rounded-sm border-zinc-600 text-[#C6AB84]">
           <IoMailOutline size={30} />
           <p className="text-lg font-medium">Say hi!</p>
         </button>
