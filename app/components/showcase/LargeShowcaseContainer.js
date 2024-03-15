@@ -9,7 +9,7 @@ export default function ShowcaseContainer({ children }) {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slideLength = 4;
+  const slideLength = 2;
   const slideAmount = 992;
 
   const slideShowTypes = {

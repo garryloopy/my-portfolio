@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import { IoCaretForwardSharp, IoLogoGithub } from "react-icons/io5";
-import { FaLink, FaLinkedinIn } from "react-icons/fa6";
+import { IoLogoGithub } from "react-icons/io5";
+import { FaLink } from "react-icons/fa6";
 
 export default function ShowCase({
   imageSource,

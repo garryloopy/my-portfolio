@@ -23,7 +23,7 @@ export default function ExperienceSection() {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.5,
+        delay: 0.6,
         duration: 1,
       },
     },
@@ -33,18 +33,26 @@ export default function ExperienceSection() {
     <SectionLayout>
       <SectionHeader>Experience</SectionHeader>
       <div className="flex flex-col gap-8">
-        <motion.p
-          className="text-gray-400 font-normal text-lg"
+        <motion.div
+          className="bg-zinc-800/45 w-full min-h-44 rounded-md border border-zinc-800 flex flex-col overflow-hidden p-4 gap-4"
           ref={ref}
           variants={variant}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Nulla commodo nostrud culpa aute non enim sunt officia quis sunt id.
-          Anim adipisicing voluptate nulla nostrud officia incididunt sit fugiat
-          dolore amet. Non cillum sint ad duis veniam pariatur adipisicing.
-          Pariatur elit ex veniam ex veniam nostrud.
-        </motion.p>
+          <div className="flex flex-row justify-between items-center">
+            <h1 className="text-gray-300 font-semibold text-xl">
+              Miggys Munchies
+            </h1>
+            <p className="text-gray-300 font-normal text-base">
+              Jan - Apr, 2024
+            </p>
+          </div>
+          <p className="text-gray-400 font-normal text-lg">
+            A four month project as part of the winter 2024 capstone at SAIT,
+            partnered with Miggys Munchies as the client and sponsor.
+          </p>
+        </motion.div>
       </div>
     </SectionLayout>
   );
