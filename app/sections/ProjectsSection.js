@@ -51,8 +51,7 @@ export default function ProjectsSection() {
         >
           Projects that I&apos;ve created or was a part of is mostly composed of
           web apps made with React, specifically NextJS React with Tailwind CSS
-          alongside other frameworks such as MongoDB, Vercel, Firebase and
-          MongoDB.
+          alongside other frameworks such as MongoDB, Vercel, and Firebase.
         </motion.p>
       </div>
     </SectionLayout>
