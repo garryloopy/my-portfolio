@@ -4,7 +4,7 @@ import { FaLink } from "react-icons/fa6";
 
 import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
 import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
-import MaritesPlaceholder from "@/public/images/marites.png";
+import MaritesPlaceholder from "@/public/images/Marites.png";
 
 import SmallShowcaseContainer from "../components/showcase/SmallShowcaseContainer";
 
