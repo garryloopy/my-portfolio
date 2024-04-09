@@ -3,6 +3,7 @@ import ShowcaseContainer from "../components/showcase/LargeShowcaseContainer.js"
 
 import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
 import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
+import MaritesPlaceholder from "@/public/images/marites.png";
 
 export default function LargeShowcase() {
   return (
@@ -24,6 +25,15 @@ export default function LargeShowcase() {
         showcaseDescription="An e-commerce web app that allows customers to buy virtual pats to virtual pets. "
         showcaseTechnologies="Next.js, Vercel, React JS, Firebase"
         showcaseTitle="Virtual Pets"
+      />
+      <ShowCase
+        imageAlt="Marites"
+        imageSource={MaritesPlaceholder}
+        githubURL="https://github.com/garryloopy/marites"
+        linkURL="https://marites.vercel.app/"
+        showcaseDescription="A chat web app that allows users to chat with each other on a global scale."
+        showcaseTechnologies="Next.js, Vercel, React JS, Firebase, TypeScript"
+        showcaseTitle="Marites"
       />
     </ShowcaseContainer>
   );
