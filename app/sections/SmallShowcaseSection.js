@@ -1,12 +1,8 @@
-import Image from "next/image";
-
 import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
 import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
 import MaritesPlaceholder from "@/public/images/Marites.png";
 
 import SmallShowcase from "../components/showcase/SmallShowcase";
-
-import SmallShowcaseContainer from "../components/showcase/SmallShowcaseContainer";
 
 export default function SmallShowcaseSection() {
   return (

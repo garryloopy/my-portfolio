@@ -88,7 +88,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
       if (res.status !== 200) {
         console.error(
           "Failed to send email. Server responded with status:",
-          res.status
+          res.status,
         );
       }
     } catch (error) {
@@ -99,84 +99,83 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
   return (
     <div
       data-show={contactFormState}
-      className="z-10 opacity-0 pointer-events-none data-[show=true]:opacity-100 sm:m-0 p-4 data-[show=true]:pointer-events-auto fixed w-full h-full grid place-items-center transition-opacity duration-300 ease-in-out backdrop-blur-sm"
+      className="pointer-events-none fixed z-10 grid h-full w-full place-items-center p-4 opacity-0 backdrop-blur-sm transition-opacity duration-300 ease-in-out data-[show=true]:pointer-events-auto data-[show=true]:opacity-100 sm:m-0"
       onClick={handleOnFormClose}
     >
       {/* Form  */}
       <form
-        className="bg-zinc-950 w-full sm:w-[40rem] sm:min-h-[40rem] border border-zinc-800 rounded-lg"
+        className="w-full rounded-lg border border-zinc-800 bg-zinc-950 sm:min-h-[40rem] sm:w-[40rem]"
         onSubmit={handleOnFormSubmit}
         onClick={(event) => event.stopPropagation()}
       >
         {/* Container  */}
-        <div className=" p-8 flex flex-col gap-4 items-center justify-center bg-zinc-800/45 w-full h-max">
-          <h1 className="text-3xl font-semibold text-zinc-300 mb-8">Contact</h1>
+        <div className=" flex h-max w-full flex-col items-center justify-center gap-4 bg-zinc-800/45 p-8">
+          <h1 className="mb-8 text-3xl font-semibold text-zinc-300">Contact</h1>
           {/* Label for the name input */}
-          <label className="w-full min-h-12 sm:min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg">
+          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
             <input
               type="text"
               value={nameValue}
               onChange={handleNameChange}
-              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-1 sm:pb-2 text-sm sm:text-md rounded-lg text-zinc-800"
+              className="sm:text-md peer h-4/6 w-full rounded-lg bg-zinc-400 px-4 pb-1 text-sm text-zinc-800 placeholder-zinc-800 outline-none sm:pb-2"
               required
             />
             <p
               data-valid={nameValue.length > 0}
-              className="absolute px-4 -translate-y-3 sm:-translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-6 sm:peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-6 sm:data-[valid=true]:-translate-y-8 rounded-b-lg"
+              className="absolute -translate-y-3 rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
             >
               Name
             </p>
           </label>
           {/* Label for the email input */}
-          <label className="w-full min-h-12 sm:min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg">
+          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
             <input
               type="text"
               value={emailValue}
               onChange={handleEmailChange}
-              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-1 sm:pb-2 text-sm sm:text-md rounded-lg text-zinc-800"
+              className="sm:text-md peer h-4/6 w-full rounded-lg bg-zinc-400 px-4 pb-1 text-sm text-zinc-800 placeholder-zinc-800 outline-none sm:pb-2"
               required
             />
             <p
               data-valid={emailValue.length > 0}
-              className="absolute px-4 -translate-y-3 sm:-translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-6 sm:peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-6 sm:data-[valid=true]:-translate-y-8 rounded-b-lg"
+              className="absolute -translate-y-3 rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
             >
               Email
             </p>
           </label>
-
           {/* Label for the phone number input */}
-          <label className="w-full min-h-12 sm:min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg">
+          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
             <input
               type="text"
               value={phoneNumberValue}
               onChange={handlePhoneNumberChange}
-              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-1 sm:pb-2 text-sm sm:text-md rounded-lg text-zinc-800"
+              className="sm:text-md peer h-4/6 w-full rounded-lg bg-zinc-400 px-4 pb-1 text-sm text-zinc-800 placeholder-zinc-800 outline-none sm:pb-2"
               required
             />
             <p
               data-valid={phoneNumberValue.length > 0}
-              className="absolute px-4 -translate-y-3 sm:-translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-6 sm:peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-6 sm:data-[valid=true]:-translate-y-8 rounded-b-lg"
+              className="absolute -translate-y-3 rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
             >
               Phone number
             </p>
           </label>
-          <label className="w-full min-h-40 flex flex-col-reverse relative bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg overflow-hidden">
+          <label className="relative flex min-h-40 w-full flex-col-reverse overflow-hidden rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-[#C6AB84] hover:cursor-text">
             <textarea
               value={messageValue}
               onChange={handleMessageChange}
-              className="bg-zinc-400 w-full h-full placeholder-zinc-800 p-4 peer outline-none peer text-zinc-800 text-sm sm:text-md"
+              className="sm:text-md peer peer h-full w-full bg-zinc-400 p-4 text-sm text-zinc-800 placeholder-zinc-800 outline-none"
               rows={4}
               cols={4}
               required
             />
-            <div className="sm:h-20 h-12 w-full flex items-center justify-center bg-zinc-500/50 peer-focus:font-semibold transition-all duration-300">
+            <div className="flex h-12 w-full items-center justify-center bg-zinc-500/50 transition-all duration-300 peer-focus:font-semibold sm:h-20">
               <p>Message</p>
             </div>
           </label>
 
           {/* Submit button */}
           <button
-            className="w-full h-12 bg-zinc-400 rounded-lg mt-8 hover:bg-zinc-500 active:bg-zinc-600 outline-none focus:ring-1 focus:ring-zinc-300 transition-all duration-300 ease-in-out"
+            className="h-14 w-full rounded-md bg-zinc-400 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-500 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
             type="submit"
           >
             Submit
@@ -184,7 +183,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
 
           {/* Close button */}
           <button
-            className="w-full h-12 bg-zinc-400 rounded-lg hover:bg-zinc-500 active:bg-zinc-600 outline-none focus:ring-1 focus:ring-zinc-300 transition-all duration-300 ease-in-out"
+            className="h-14 w-full rounded-md bg-zinc-400 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-500 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
             type="button"
             onClick={handleOnFormClose}
           >
