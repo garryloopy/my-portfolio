@@ -32,7 +32,7 @@ export default function HomePage() {
         onDialogClose={handleCloseDialog}
       />
 
-      <section className="flex flex-col gap-12 items-center p-8">
+      <section className="flex flex-col gap-12 items-center p-4">
         <Element name="aboutMeElement" />
         <AboutMeSection />
         <Element name="educationElement" />

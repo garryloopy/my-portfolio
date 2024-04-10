@@ -36,6 +36,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
   const resetFormValues = () => {
     setNameValue("");
     setEmailValue("");
+    setPhoneNumberValue("");
     setMessageValue("");
   };
 
