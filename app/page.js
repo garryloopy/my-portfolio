@@ -9,13 +9,29 @@ import LandingSection from "./sections/LandingSection";
 import ExperienceSection from "./sections/ExperienceSection";
 
 import { Element } from "react-scroll";
+import ContactForm from "./components/ContactForm";
 
-// Test
+import { useState } from "react";
 
 export default function HomePage() {
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+
+  const handleOpenDialog = () => {
+    setIsContactDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsContactDialogOpen(false);
+  };
+
   return (
     <PageLayout>
-      <LandingSection />
+      <LandingSection onContactClick={handleOpenDialog} />
+      <ContactForm
+        isContactDialogOpen={isContactDialogOpen}
+        onDialogClose={handleCloseDialog}
+      />
+
       <section className="flex flex-col gap-12 items-center">
         <Element name="aboutMeElement" />
         <AboutMeSection />

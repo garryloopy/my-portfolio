@@ -10,7 +10,13 @@ import { motion } from "framer-motion";
  * Represents the landing section of the main page.
  * @returns A landing section component .
  */
-export default function LandingSection() {
+export default function LandingSection({ onContactClick }) {
+  const handleOnContactClick = () => {
+    if (onContactClick) {
+      onContactClick();
+    }
+  };
+
   return (
     <section className="flex flex-col items-center justify-center gap-6 h-screen">
       <motion.div
@@ -60,7 +66,10 @@ export default function LandingSection() {
           }}
           transition={{ repeat: Infinity, duration: 8, repeatType: "reverse" }}
         />
-        <button className="border flex flex-row items-center justify-center gap-2 relative px-8 py-3 bg-[#00111C] rounded-sm border-zinc-600 text-[#C6AB84]">
+        <button
+          className="border flex flex-row items-center justify-center gap-2 relative px-8 py-3 bg-[#00111C] rounded-sm border-zinc-600 text-[#C6AB84]"
+          onClick={handleOnContactClick}
+        >
           <IoMailOutline size={30} />
           <p className="text-lg font-medium">Say hi!</p>
         </button>

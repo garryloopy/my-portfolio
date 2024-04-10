@@ -14,7 +14,7 @@ import { useRef, useEffect } from "react";
  * Represents the about me section
  * @returns About me section
  */
-export default function AboutMeSection() {
+export default function AboutMeSection({ onContactClick }) {
   const refOptions = {
     once: true,
   };
