@@ -1,40 +1,10 @@
 import { useEffect, useState, useRef } from "react";
-
-export default function ContactForm({ isContactDialogOpen, onDialogClose }) {
-  useEffect(() => {
-    if (isContactDialogOpen) {
-      handleOpenDialog();
-    } else {
-      handleCloseDialog();
-    }
-  }, [isContactDialogOpen]);
-
-  // Reference to the form dialog
-  const formRef = useRef(null);
-
+export default function ContactForm({ contactFormState, onDialogClose }) {
   // State for the form values
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [phoneNumberValue, setPhoneNumberValue] = useState("");
-
-  /**
-   * Handler for opening the dialog, specifically the form dialog
-   */
-  const handleCloseDialog = () => {
-    const dialog = formRef.current;
-
-    dialog.close();
-  };
-
-  /**
-   * Handler for closing the dialog, specifically the form dialog
-   */
-  const handleOpenDialog = () => {
-    const dialog = formRef.current;
-
-    dialog.showModal();
-  };
 
   /**
    * Handler for the form submission
@@ -47,14 +17,13 @@ export default function ContactForm({ isContactDialogOpen, onDialogClose }) {
 
     resetFormValues();
 
-    handleOnDialogClose();
+    handleOnFormClose();
   };
 
   /**
    * Handler for closing the dialog and calling the onDialogClose function
    */
-  const handleOnDialogClose = () => {
-    handleCloseDialog();
+  const handleOnFormClose = () => {
     if (onDialogClose) {
       onDialogClose();
     }
@@ -126,11 +95,16 @@ export default function ContactForm({ isContactDialogOpen, onDialogClose }) {
   }
 
   return (
-    <dialog ref={formRef}>
+    <div
+      data-show={contactFormState}
+      className="z-10 opacity-0 pointer-events-none data-[show=true]:opacity-100 data-[show=true]:pointer-events-auto fixed w-full h-full grid place-items-center transition-opacity duration-300 ease-in-out backdrop-blur-sm"
+      onClick={handleOnFormClose}
+    >
       {/* Form  */}
       <form
         className="bg-zinc-950 size-[36rem] border border-zinc-800"
         onSubmit={handleOnFormSubmit}
+        onClick={(event) => event.stopPropagation()}
       >
         {/* Container  */}
         <div className=" p-8 flex flex-col gap-4 items-center justify-center bg-zinc-800/45 w-full h-full">
@@ -174,12 +148,12 @@ export default function ContactForm({ isContactDialogOpen, onDialogClose }) {
           <button
             className="w-full h-10 bg-zinc-600"
             type="button"
-            onClick={handleOnDialogClose}
+            onClick={handleOnFormClose}
           >
             Close
           </button>
         </div>
       </form>
-    </dialog>
+    </div>
   );
 }

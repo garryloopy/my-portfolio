@@ -14,21 +14,21 @@ import ContactForm from "./components/ContactForm";
 import { useState } from "react";
 
 export default function HomePage() {
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   const handleOpenDialog = () => {
-    setIsContactDialogOpen(true);
+    setIsContactFormOpen(true);
   };
 
   const handleCloseDialog = () => {
-    setIsContactDialogOpen(false);
+    setIsContactFormOpen(false);
   };
 
   return (
     <PageLayout>
       <LandingSection onContactClick={handleOpenDialog} />
       <ContactForm
-        isContactDialogOpen={isContactDialogOpen}
+        contactFormState={isContactFormOpen}
         onDialogClose={handleCloseDialog}
       />
 
