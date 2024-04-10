@@ -122,7 +122,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             />
             <p
               data-valid={nameValue.length > 0}
-              className="absolute -translate-y-3 rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
+              className="absolute -translate-y-3 select-none rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
             >
               Name
             </p>
@@ -138,7 +138,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             />
             <p
               data-valid={emailValue.length > 0}
-              className="absolute -translate-y-3 rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
+              className="absolute -translate-y-3 select-none rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
             >
               Email
             </p>
@@ -154,7 +154,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             />
             <p
               data-valid={phoneNumberValue.length > 0}
-              className="absolute -translate-y-3 rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
+              className="absolute -translate-y-3 select-none rounded-b-lg px-4 transition-all duration-300 peer-focus:-translate-y-6 peer-focus:font-semibold data-[valid=true]:-translate-y-6 sm:-translate-y-5 sm:peer-focus:-translate-y-8 sm:data-[valid=true]:-translate-y-8"
             >
               Phone number
             </p>
@@ -168,7 +168,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
               cols={4}
               required
             />
-            <div className="flex h-12 w-full items-center justify-center bg-zinc-500/50 transition-all duration-300 peer-focus:font-semibold sm:h-20">
+            <div className="flex h-12 w-full select-none items-center justify-center bg-zinc-500/50 transition-all duration-300 peer-focus:font-semibold sm:h-20">
               <p>Message</p>
             </div>
           </label>
@@ -178,16 +178,16 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             className="h-14 w-full rounded-md bg-zinc-400 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-500 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
             type="submit"
           >
-            Submit
+            <p className="select-none font-semibold">Submit</p>
           </button>
 
           {/* Close button */}
           <button
-            className="h-14 w-full rounded-md bg-zinc-400 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-500 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
+            className="h-14 w-full rounded-md bg-zinc-500 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-600 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
             type="button"
             onClick={handleOnFormClose}
           >
-            Close
+            <p className="select-none font-semibold">Close</p>
           </button>
         </div>
       </form>

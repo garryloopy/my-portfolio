@@ -34,21 +34,21 @@ export default function ExperienceSection() {
       <SectionHeader>Experience</SectionHeader>
       <div className="flex flex-col gap-8">
         <motion.div
-          className="bg-zinc-800/45 w-full min-h-44 rounded-md border border-zinc-800 flex flex-col overflow-hidden p-4 gap-4"
+          className="flex min-h-44 w-full flex-col gap-4 overflow-hidden rounded-md border border-zinc-800 bg-zinc-800/45 p-4"
           ref={ref}
           variants={variant}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <div className="flex flex-row justify-between items-center">
-            <h1 className="text-gray-300 font-semibold text-xl">
+          <div className="flex flex-row items-center justify-between">
+            <h1 className="text-xl font-semibold text-gray-300">
               Miggys Munchies
             </h1>
-            <p className="text-gray-300 font-normal text-base">
+            <p className="text-base font-normal text-gray-300">
               Jan - Apr, 2024
             </p>
           </div>
-          <p className="text-gray-400 font-normal text-lg">
+          <p className="text-md font-normal text-gray-400">
             A four month project as part of the winter 2024 capstone at SAIT,
             partnered with Miggys Munchies as the client and sponsor.
           </p>
