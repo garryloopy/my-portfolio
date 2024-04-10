@@ -18,7 +18,7 @@ export default function LandingSection({ onContactClick }) {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center gap-6 h-screen">
+    <section className="flex flex-col items-center justify-center gap-6 h-screen p-4">
       <motion.div
         className="flex flex-col justify-center items-center gap-4 group"
         initial={{ x: -100, opacity: 0 }}
