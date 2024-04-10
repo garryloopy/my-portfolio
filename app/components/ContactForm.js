@@ -109,14 +109,18 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
         {/* Container  */}
         <div className=" p-8 flex flex-col gap-4 items-center justify-center bg-zinc-800/45 w-full h-full">
           <h1 className="text-3xl font-semibold text-zinc-300">Contact</h1>
-          <input
-            type="text"
-            placeholder="Name"
-            value={nameValue}
-            onChange={handleNameChange}
-            className="bg-zinc-400 w-full h-10 placeholder-zinc-800 px-4"
-            required
-          />
+          <label className="w-full h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300">
+            <input
+              type="text"
+              value={nameValue}
+              onChange={handleNameChange}
+              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none"
+              required
+            />
+            <p className="absolute px-4 -translate-y-4 peer-focus:-translate-y-8 transition-transform duration-300">
+              Name
+            </p>
+          </label>
           <input
             type="text"
             placeholder="Email"
