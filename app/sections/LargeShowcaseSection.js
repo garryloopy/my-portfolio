@@ -5,7 +5,7 @@ import ECommerceStorePlaceholder from "@/public/images/E-commerce_App.png";
 import MiggysMunchiesPlaceholder from "@/public/images/Miggy's_Munchies_placeholder.png";
 import MaritesPlaceholder from "@/public/images/Marites.png";
 
-export default function LargeShowcase() {
+export default function LargeShowcaseSection() {
   return (
     <ShowcaseContainer>
       <ShowCase

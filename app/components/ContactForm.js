@@ -111,48 +111,51 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
         {/* Container  */}
         <div className=" p-8 flex flex-col gap-4 items-center justify-center bg-zinc-800/45 w-full h-max">
           <h1 className="text-3xl font-semibold text-zinc-300 mb-8">Contact</h1>
-          <label className="w-full min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg overflow-hidden">
+          {/* Label for the name input */}
+          <label className="w-full min-h-12 sm:min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg">
             <input
               type="text"
               value={nameValue}
               onChange={handleNameChange}
-              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-2"
+              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-1 sm:pb-2 text-sm sm:text-md rounded-lg text-zinc-800"
               required
             />
             <p
               data-valid={nameValue.length > 0}
-              className="absolute px-4 -translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-8"
+              className="absolute px-4 -translate-y-3 sm:-translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-6 sm:peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-6 sm:data-[valid=true]:-translate-y-8 rounded-b-lg"
             >
               Name
             </p>
           </label>
-          <label className="w-full min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg overflow-hidden">
+          {/* Label for the email input */}
+          <label className="w-full min-h-12 sm:min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg">
             <input
               type="text"
               value={emailValue}
               onChange={handleEmailChange}
-              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-2"
+              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-1 sm:pb-2 text-sm sm:text-md rounded-lg text-zinc-800"
               required
             />
             <p
               data-valid={emailValue.length > 0}
-              className="absolute px-4 -translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-8"
+              className="absolute px-4 -translate-y-3 sm:-translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-6 sm:peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-6 sm:data-[valid=true]:-translate-y-8 rounded-b-lg"
             >
               Email
             </p>
           </label>
 
-          <label className="w-full min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg overflow-hidden">
+          {/* Label for the phone number input */}
+          <label className="w-full min-h-12 sm:min-h-16 relative flex items-end bg-zinc-400 hover:cursor-text focus-within:ring-1 focus-within:ring-zinc-300 rounded-lg">
             <input
               type="text"
               value={phoneNumberValue}
               onChange={handlePhoneNumberChange}
-              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-2"
+              className="bg-zinc-400 w-full h-4/6 placeholder-zinc-800 px-4 peer outline-none pb-1 sm:pb-2 text-sm sm:text-md rounded-lg text-zinc-800"
               required
             />
             <p
               data-valid={phoneNumberValue.length > 0}
-              className="absolute px-4 -translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-8"
+              className="absolute px-4 -translate-y-3 sm:-translate-y-5 peer-focus:font-semibold peer-focus:-translate-y-6 sm:peer-focus:-translate-y-8 transition-all duration-300 data-[valid=true]:-translate-y-6 sm:data-[valid=true]:-translate-y-8 rounded-b-lg"
             >
               Phone number
             </p>
@@ -161,32 +164,27 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             <textarea
               value={messageValue}
               onChange={handleMessageChange}
-              className="bg-zinc-400 w-full h-full placeholder-zinc-800 p-4 peer outline-none peer"
+              className="bg-zinc-400 w-full h-full placeholder-zinc-800 p-4 peer outline-none peer text-zinc-800 text-sm sm:text-md"
               rows={4}
               cols={4}
               required
             />
-            <div className="h-20 w-full flex items-center justify-center bg-zinc-500/50 peer-focus:font-semibold transition-all duration-300">
+            <div className="sm:h-20 h-12 w-full flex items-center justify-center bg-zinc-500/50 peer-focus:font-semibold transition-all duration-300">
               <p>Message</p>
             </div>
           </label>
 
-          {/* <textarea
-            className="bg-zinc-400 w-full h-32 placeholder-zinc-800 p-4"
-            placeholder="Message"
-            onChange={handleMessageChange}
-            value={messageValue}
-            required
-          /> */}
+          {/* Submit button */}
           <button
-            className="w-full h-12 bg-zinc-600 rounded-lg mt-8 hover:bg-zinc-500 active:bg-zinc-600"
+            className="w-full h-12 bg-zinc-400 rounded-lg mt-8 hover:bg-zinc-500 active:bg-zinc-600 outline-none focus:ring-1 focus:ring-zinc-300 transition-all duration-300 ease-in-out"
             type="submit"
           >
             Submit
           </button>
 
+          {/* Close button */}
           <button
-            className="w-full h-12 bg-zinc-600 rounded-lg hover:bg-zinc-500 active:bg-zinc-600"
+            className="w-full h-12 bg-zinc-400 rounded-lg hover:bg-zinc-500 active:bg-zinc-600 outline-none focus:ring-1 focus:ring-zinc-300 transition-all duration-300 ease-in-out"
             type="button"
             onClick={handleOnFormClose}
           >

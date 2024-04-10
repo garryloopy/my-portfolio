@@ -3,8 +3,8 @@
 import SectionHeader from "../components/SectionHeader";
 import SectionLayout from "../layouts/SectionLayout";
 
-import SmallShowcase from "../sections/SmallShowcaseSection";
-import LargeShowcase from "../sections/LargeShowcaseSection";
+import SmallShowcaseSection from "../sections/SmallShowcaseSection";
+import LargeShowcaseSection from "../sections/LargeShowcaseSection";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -37,8 +37,8 @@ export default function ProjectsSection() {
     <SectionLayout>
       <SectionHeader>Projects</SectionHeader>
       <div className="flex flex-col gap-8">
-        <LargeShowcase />
-        <SmallShowcase />
+        <LargeShowcaseSection />
+        <SmallShowcaseSection />
       </div>
 
       <div className="flex flex-col gap-8">
