@@ -99,7 +99,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
   return (
     <div
       data-show={contactFormState}
-      className="pointer-events-none fixed z-10 grid h-full w-full place-items-center p-4 opacity-0 backdrop-blur-sm transition-opacity duration-300 ease-in-out data-[show=true]:pointer-events-auto data-[show=true]:opacity-100 sm:m-0"
+      className="pointer-events-none fixed z-10 grid h-full w-full place-items-center opacity-0 p-4 sm:p-0 backdrop-blur-sm transition-opacity duration-300 ease-in-out data-[show=true]:pointer-events-auto data-[show=true]:opacity-100 sm:m-0"
       onClick={handleOnFormClose}
     >
       {/* Form  */}
@@ -109,7 +109,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
         onClick={(event) => event.stopPropagation()}
       >
         {/* Container  */}
-        <div className=" flex h-max w-full flex-col items-center justify-center gap-4 bg-zinc-800/45 p-8">
+        <div className=" flex h-max w-full flex-col items-center justify-center gap-4 bg-zinc-800/45 p-8 sm:p-16">
           <h1 className="mb-8 text-3xl font-semibold text-zinc-300">Contact</h1>
           {/* Label for the name input */}
           <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
