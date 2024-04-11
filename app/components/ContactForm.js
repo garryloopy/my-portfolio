@@ -99,7 +99,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
   return (
     <div
       data-show={contactFormState}
-      className="pointer-events-none fixed z-10 grid h-full w-full place-items-center opacity-0 p-4 sm:p-0 backdrop-blur-sm transition-opacity duration-300 ease-in-out data-[show=true]:pointer-events-auto data-[show=true]:opacity-100 sm:m-0"
+      className="pointer-events-none fixed z-10 grid h-full w-full over place-items-center opacity-0 p-4 sm:p-0 backdrop-blur-sm transition-opacity duration-300 ease-in-out data-[show=true]:pointer-events-auto data-[show=true]:opacity-100 sm:m-0"
       onClick={handleOnFormClose}
     >
       {/* Form  */}
@@ -109,10 +109,10 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
         onClick={(event) => event.stopPropagation()}
       >
         {/* Container  */}
-        <div className=" flex h-max w-full flex-col items-center justify-center gap-4 bg-zinc-800/45 p-8 sm:p-16">
-          <h1 className="mb-8 text-3xl font-semibold text-zinc-300">Contact</h1>
+        <div className=" flex h-max w-full flex-col items-center justify-center gap-4 bg-gradient-to-tr from-zinc-800/40 to-zinc-800/45 p-8 sm:p-16">
+          <h1 className="mb-8 text-3xl font-semibold text-zinc-300">Get in touch</h1>
           {/* Label for the name input */}
-          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
+          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-2 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16 transition-all duration-300 opacity-75 focus-within:opacity-100 hover:opacity-100">
             <input
               type="text"
               value={nameValue}
@@ -128,7 +128,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             </p>
           </label>
           {/* Label for the email input */}
-          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
+          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-2 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16 transition-all duration-300 opacity-75 focus-within:opacity-100 hover:opacity-100">
             <input
               type="text"
               value={emailValue}
@@ -144,7 +144,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
             </p>
           </label>
           {/* Label for the phone number input */}
-          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-1 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16">
+          <label className="relative flex min-h-12 w-full items-end rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-2 focus-within:ring-[#C6AB84] hover:cursor-text sm:min-h-16 transition-all duration-300 opacity-75 focus-within:opacity-100 hover:opacity-100">
             <input
               type="text"
               value={phoneNumberValue}
@@ -159,7 +159,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
               Phone number
             </p>
           </label>
-          <label className="relative flex min-h-40 w-full flex-col-reverse overflow-hidden rounded-md bg-zinc-400 focus-within:shadow-md focus-within:shadow-[#C6AB84] focus-within:ring-[#C6AB84] hover:cursor-text">
+          <label className="relative flex min-h-40 w-full flex-col-reverse overflow-hidden rounded-md bg-zinc-400 focus-within:shadow-md focus-within:ring-2 focus-within:shadow-[#C6AB84] focus-within:ring-[#C6AB84] hover:cursor-text transition-all duration-300  opacity-75 focus-within:opacity-100 hover:opacity-100">
             <textarea
               value={messageValue}
               onChange={handleMessageChange}
@@ -175,7 +175,7 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
 
           {/* Submit button */}
           <button
-            className="h-14 w-full rounded-md bg-zinc-400 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-500 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
+            className="h-12 w-full rounded-md bg-gradient-to-r from-zinc-400 to-zinc-500 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-500 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-2 focus:ring-[#C6AB84] active:bg-zinc-600  opacity-75 focus-within:opacity-100 hover:opacity-100 mt-8"
             type="submit"
           >
             <p className="select-none font-semibold">Submit</p>
@@ -183,12 +183,13 @@ export default function ContactForm({ contactFormState, onDialogClose }) {
 
           {/* Close button */}
           <button
-            className="h-14 w-full rounded-md bg-zinc-500 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-600 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-1 focus:ring-[#C6AB84] active:bg-zinc-600 "
+            className="h-12 w-full rounded-md bg-gradient-to-r from-zinc-500 to-zinc-600 outline-none transition-all duration-300 ease-in-out hover:bg-zinc-600 focus:shadow-md focus:shadow-[#C6AB84] focus:ring-2 focus:ring-[#C6AB84] active:bg-zinc-600  opacity-75 focus-within:opacity-100 hover:opacity-100"
             type="button"
             onClick={handleOnFormClose}
           >
             <p className="select-none font-semibold">Close</p>
           </button>
+          <p className="text-zinc-400 text-sm">Message sent to: <span className="italic text-zinc-300">garrydayagjr@gmail.com</span></p>
         </div>
       </form>
     </div>

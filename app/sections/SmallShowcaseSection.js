@@ -11,6 +11,7 @@ export default function SmallShowcaseSection() {
         imageSource={MiggysMunchiesPlaceholder}
         imageAlt="Miggy's Munchies image"
         showcaseTitle="Miggy's Munchies"
+        showcaseTechnologies="Built with Next.js, Vercel, React JS, MongoDB, Next AUTH, and Cloudinary"
         showcaseDescription="An e-commerce web app that allows customers to order food items such as Suchi Bake, Spam Musubi, Mango Graham, and Baked Macaroni. "
         strongDescription="A Capstone Project during Winter 2024 at SAIT, partnered with
         Miggy's Munchies as the client and sponsor."
