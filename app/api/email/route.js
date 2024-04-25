@@ -32,16 +32,16 @@ export async function POST(req) {
     `,
     };
 
-    transporter.sendMail(mainOptions);
-
-    return NextResponse.json(
-      { message: "Email sent successfully" },
-      { status: 200 }
-    );
+    await transporter.sendMail(mainOptions);
   } catch (error) {
     return NextResponse.json(
       { message: "Error sending email" },
       { status: 500 }
     );
   }
+
+  return NextResponse.json(
+    { message: "Email sent successfully" },
+    { status: 200 }
+  );
 }
